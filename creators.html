@@ -7,22 +7,22 @@
     <title>VOX</title>
     <link rel="stylesheet" href="style.css">
       <script async src="scripts/creators_script.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div id = "boxes">
+        <div class="formBoxes">
         <h1>Создание</h1>
         <div id = "leftbox">
             <form class="creators-form">
                 <label>
                     <input type="text" placeholder="Приглашенный"/>
                 </label>
-                <input type="submit" value="Добавить"/>
+                <input type="button" value="Добавить"/>
                 <label for="setsList"></label><select name="setsList" id="setsList" class="objectsList">
                     <option value="MainObject"></option>
                 </select>
             </form>
         </div>
-         
         <div id = "middlebox">
             <form class="creators-form">
                 <label>
@@ -31,29 +31,29 @@
                 <label>
                     <input  type="datetime-local"/>
                 </label>
-                <input type="submit"/>
+                <input type="button" value="Создать голосование"/>
             </form>
         </div>
-         
         <div id = "rightbox">
             <form class="creators-form">
                 <label>
                     <input type="text" placeholder="Объект"/>
                 </label>
-                <input type="submit" value="Добавить"/>
+                <input type="button" value="Добавить"/>
                 <label for="candidatesList"></label><select name="candidatesList" id="candidatesList" class="objectsList">
                     <option value="MainObject"></option>
                 </select>
             </form>
         </div>
+            <div class="foot">
+                <div>
+                    <form class="input-navigate">
+                        <input id="navigateCreateBtn" type="button" value="Создать">
+                        <input id="navigateVoteBtn" type="button" value="Управлять">
+                    </form>
+                </div>
+            </div>
     </div>
-    <div class="foot">
-        <div>
-            <form class="input-navigate">
-                <input id="navigateCreateBtn" type="submit" value="Создать">
-                <input id="navigateVoteBtn" type="submit" value="Управлять">
-            </form>
-        </div>
-    </div>
+
   </body>
 </html>
