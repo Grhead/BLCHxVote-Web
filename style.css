@@ -1,0 +1,247 @@
+body {
+	/*background: linear-gradient(#1E1E1E, #171717) no-repeat fixed;*/
+	background: #171717;
+}
+
+.foot {
+	/*top: 95%;*/
+    /*width: 95%;*/
+	/*transform: translate(2%,0%);*/
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #1E1E1E;
+	border-radius: 18px;
+    /*border: 18px solid #5A6B5D;*/
+}
+
+.form h1 {
+	margin: 30px 100px;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: "Open Sans", serif;
+}
+
+.input-form {
+	margin: 20px 45px;
+	text-align: center;
+}
+
+.input-form input {
+	padding: 10px;
+	width: 100%;
+	color: #CFCFCF;
+	font-size: 24px;
+	background: none;
+	outline: none;
+	border-radius: 18px;
+	box-sizing: border-box;
+	font-family: "Open Sans", serif;
+	box-shadow: none;
+	font-weight: bold;
+}
+
+.input-form input[type="button"] {
+	margin-top: 20px;
+    margin-bottom: 20px;
+	border-radius: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	background: #FF4C2B;
+	transition: 0.3s;
+	font-family: "Open Sans", serif;
+}
+.input-form input[type="button"]:hover {
+	background: #D94125;
+}
+.input-form input[type="text"]:focus {
+	background: #262626;
+}
+.input-form input[type="password"]:focus {
+	 background: #262626;
+ }
+
+.input-form-keys {
+	margin: 15px 30px;
+	text-align: center;
+}
+.input-form-keys textarea {
+	padding: 12px;
+	width: 100%;
+	color: #CFCFCF;
+	background: none;
+	border-radius: 18px;
+	outline: none;
+	font-size: 18px;
+	box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+	font-family: 'Cascadia Code', sans-serif;
+}
+.input-form-keys textarea:focus {
+	background: #202020;
+}
+
+.input-navigate {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-navigate input[type="button"] {
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 9px;
+	text-transform: uppercase;
+	min-width: 160px;
+    height: 40px;
+	background: #FF4C2B;
+	font-family: "Open Sans", serif;
+	font-size: 21px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: none;
+}
+
+.input-navigate input[type="button"]:hover {
+	background: #D94125;
+}
+
+#boxes {
+    display:inline;
+}
+
+#boxes h1{
+    margin: 30px 100px;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-family: "Open Sans", serif;
+}
+
+#leftbox {
+    float:left;
+    width:30%;
+    height:auto;
+}
+
+#middlebox{
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    float:left;
+    width:40%;
+    height:auto;
+}
+
+#rightbox{
+    float:right;
+    width:30%;
+    height:auto;
+}
+
+.creators-form {
+    text-align: center;
+    margin: 1%;
+}
+
+.creators-form input[type="text"] {
+	padding: 10px;
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+	background: none;
+	outline: none;
+	/*border: 1px solid #fff;*/
+	box-sizing: border-box;
+    text-align: center;
+	font-family: "Open Sans", serif;
+}
+.creators-form input[type="datetime-local"] {
+	padding: 10px;
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+	background: none;
+	outline: none;
+	/*border: 1px solid #fff;*/
+	box-sizing: border-box;
+	font-family: "Open Sans", serif;
+}
+.creators-form input[type="button"] {
+	margin-top: 20px;
+    margin-bottom: 20px;
+	border-radius: 18px;
+	color: #fff;
+	font-weight: bold;
+    width: 80%;
+    height: 30px;
+	text-transform: uppercase;
+	border: none;
+	background: #FF4C2B;
+	transition: 0.3s;
+	font-family: "Open Sans", serif;
+}
+.creators-form input[type="button"]:hover {
+	background: #D94125;
+}
+
+#left {
+    float:left;
+    width:50%;
+    height:auto;
+}
+
+#right{
+    top: 50%;
+	transform: translate(-0%,250%);
+    float:right;
+    width:50%;
+    height:auto;
+}
+
+.objectsList  {
+    width: 100%;
+    /* margin-top: 40px;
+	color: #000;
+	font-weight: bold;
+    width: 80%;
+    height: 30px;
+	text-transform: uppercase;
+	border: none;
+	background: #B8CABA;
+	text-align: left;
+    width: 100%; */
+    font-weight:700;
+    text-transform: uppercase;
+	/* Убираем браузерную стрелку */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	/* Задаем свой фон и рамку */
+	border: 1px solid #B8CABA;
+	background-color: #B8CABA;
+	/* Отступы от рамки к тексту */
+	padding: 10px 35px 10px 15px;
+	/* Убираем баузерную обводку*/
+	outline: none;
+	cursor: pointer;
+}
+.objectsList:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px #5A6B5D, 0 0 10px #5A6B5D;
+}
