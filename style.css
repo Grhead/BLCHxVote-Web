@@ -90,6 +90,7 @@ body {
 	margin: 15px 30px;
 	text-align: center;
 }
+
 .input-form-keys textarea {
 	padding: 12px;
 	width: 100%;
@@ -99,11 +100,51 @@ body {
 	outline: none;
 	font-size: 18px;
 	box-sizing: border-box;
-    resize: none;
-    overflow: hidden;
+	resize: none;
+	overflow: hidden;
 	font-family: 'Cascadia Code', sans-serif;
 }
 .input-form-keys textarea:focus {
+	background: #202020;
+}
+
+.input-form-keys {
+	margin: 15px 30px;
+	text-align: center;
+}
+.register-input-form-keys input[type="text"]:focus {
+	background: #262626;
+}
+input[type="text"] {
+	padding: 12px;
+	width: 100%;
+	color: #CFCFCF;
+	background: none;
+	border-radius: 18px;
+	outline: none;
+	font-size: 18px;
+	box-sizing: border-box;
+	resize: none;
+	overflow: hidden;
+	font-family: 'Cascadia Code', sans-serif;
+}
+.register-input-form-keys input[type="text"]:focus {
+	background: #262626;
+}
+.register-input-form-keys textarea {
+	padding: 12px;
+	width: 100%;
+	color: #CFCFCF;
+	background: none;
+	border-radius: 18px;
+	outline: none;
+	font-size: 18px;
+	box-sizing: border-box;
+	resize: none;
+	overflow: hidden;
+	font-family: 'Cascadia Code', sans-serif;
+}
+.register-input-form-keys textarea:focus {
 	background: #202020;
 }
 
@@ -141,8 +182,8 @@ body {
 	transform: translate(-50%,-50%);
 	/*background: #1E1E1E;*/
 	/*border-radius: 18px;*/
-	min-width: 98%;
-	min-height: 98%;
+	min-width: 100%;
+	min-height: 100%;
 	/*border: 18px solid #5A6B5D;*/
 }
 #leftbox {
@@ -157,7 +198,7 @@ body {
 #middlebox{
 	padding: 10px;
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	float:left;
@@ -228,32 +269,23 @@ body {
 .creators-form input[type="button"] {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border-radius: 18px;
+	border-radius: 9px;
 	color: #ffffff;
 	font-weight: bold;
 	text-transform: uppercase;
 	border: none;
 	background: #FF4C2B;
+	font-size: 24px;
 	transition: 0.3s;
 	font-family: "Open Sans", serif;
+	min-height: 40px;
+	min-width: 180px;
+	align-content: center;
+	box-sizing: border-box;
 }
 .creators-form input[type="button"]:hover {
 	background: #D94125;
 }
-
-/*#left {*/
-/*    float:left;*/
-/*    width:50%;*/
-/*    height:auto;*/
-/*}*/
-
-/*#right{*/
-/*    top: 50%;*/
-/*	transform: translate(-0%,250%);*/
-/*    float:right;*/
-/*    width:50%;*/
-/*    height:auto;*/
-/*}*/
 
 .objectsList  {
 	border-radius: 9px;
