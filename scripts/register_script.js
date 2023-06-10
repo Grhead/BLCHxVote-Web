@@ -8,6 +8,7 @@ function baseAuthCLick(){
     valLogin = document.getElementById('loginInput').value;
     valPassword = document.getElementById('passwordInput').value;
     valPasswordSecond = document.getElementById('passwordInputSecond').value;
+
     const req = new XMLHttpRequest();
     if (valPassword === valPasswordSecond) {
         req.open("POST", "http://localhost:8199/register", false);
@@ -18,10 +19,6 @@ function baseAuthCLick(){
         req.send(JSON.stringify(data));
         const toParse = JSON.parse(req.responseText);
         if (toParse.status === "Succeed") {
-            // document.cookie = "login" + "=" + valLogin + ";" +
-            //                     "password" + "=" + valPassword + ";" +
-            //                     ";path=/" +
-            //                     "max-age=3600";
             document.cookie = "login" + "=" + valLogin + ";" +
                 "password" + "=" + valPassword + ";" +
                 "path=/";
