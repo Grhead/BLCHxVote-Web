@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VOX</title>
     <link rel="stylesheet" href="style.css">
-      <script async src="scripts/creators_script.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-        <div class="formBoxes">
-        <h1>Создание</h1>
-        <div id = "leftBox">
-            <form class="creators-form">
-                <label>
-                    <input type="text" placeholder="Приглашенный"/>
-                </label>
-                <input type="button" value="Добавить"/>
-                <label for="setsList"></label><select name="setsList" id="setsList" class="objectsList">
-                    <option value="MainObject"></option>
-                </select>
-            </form>
-        </div>
-        <div id = "middleBox">
-            <form class="creators-form">
-                <label>
-                    <input type="text" placeholder="Название"/>
-                </label>
-                <label>
-                    <input  type="datetime-local"/>
-                </label>
-                <input type="button" value="Создать
-голосование"/>
-            </form>
-        </div>
-        <div id = "rightBox">
-            <form class="creators-form">
-                <label>
-                    <input type="text" placeholder="Объект"/>
-                </label>
-                <input type="button" value="Добавить"/>
-                <label for="candidatesList"></label><select name="candidatesList" id="candidatesList" class="objectsList">
-                    <option value="MainObject"></option>
-                </select>
-            </form>
-        </div>
-            <div class="foot">
-                <div>
-                    <form class="input-navigate">
-                        <input id="navigateCreateBtn" type="button" value="Создать">
-                        <input id="navigateVoteBtn" type="button" value="Управлять">
-                    </form>
-                </div>
-            </div>
+    <script async src="scripts/creators_script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="formBoxes">
+    <h1>Создание</h1>
+    <div id="leftBox">
+        <form class="creators-form">
+            <label>
+                <input type="text" placeholder="Приглашенный"/>
+            </label>
+            <input type="button" value="Добавить"/>
+            <label for="setsList"></label><select name="setsList" id="setsList" class="objectsList">
+            <option value="MainObject"></option>
+        </select>
+        </form>
     </div>
+    <div id="middleBox">
+        <form class="creators-form">
+            <label>
+                <input type="text" placeholder="Название"/>
+            </label>
+            <label>
+                <input type="datetime-local"/>
+            </label>
+            <input type="button" value="Создать
+голосование"/>
+        </form>
+    </div>
+    <div id="rightBox">
+        <form class="creators-form">
+            <label>
+                <input type="text" placeholder="Объект"/>
+            </label>
+            <input type="button" value="Добавить"/>
+            <label for="candidatesList"></label><select name="candidatesList" id="candidatesList" class="objectsList">
+            <option value="MainObject"></option>
+        </select>
+        </form>
+    </div>
+    <div class="foot">
+        <div>
+            <form class="input-navigate">
+                <input id="navigateCreateBtn" type="button" value="Создать">
+                <input id="navigateVoteBtn" type="button" value="Управлять">
+            </form>
+        </div>
+    </div>
+</div>
 
-  </body>
+</body>
 </html>

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VOX</title>
     <link rel="stylesheet" href="style.css">
-      <script async src="scripts/authVoting_script.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-      <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
-  </head>
-  <body>
-    <div class="form">
-		<h1>Голосование</h1>
-		<form class="input-form-keys">
-            <label for="txtAreaPublic"></label><textarea id="txtAreaPublic" rows="2" cols="3" placeholder="Публичный ключ"></textarea>
-            <label for="txtAreaPrivate"></label><textarea id="txtAreaPrivate" rows="2" cols="3" placeholder="Приватный ключ"></textarea>
-		</form>
-		<form class="input-form">
-			<input type="button" value="Войти" id="submitAuthBtn">
-		</form>
+    <script async src="scripts/authVoting_script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+</head>
+<body>
+<div class="form">
+    <h1>Голосование</h1>
+    <form class="input-form-keys">
+        <label for="txtAreaPublic"></label><textarea id="txtAreaPublic" rows="2" cols="3"
+                                                     placeholder="Публичный ключ"></textarea>
+        <label for="txtAreaPrivate"></label><textarea id="txtAreaPrivate" rows="2" cols="3"
+                                                      placeholder="Приватный ключ"></textarea>
+    </form>
+    <form class="input-form">
+        <input type="button" value="Войти" id="submitAuthBtn">
+        <input type="button" value="Зарегистрироваться" id="submitBasicRegBtn">
+    </form>
+</div>
+<div class="foot">
+    <div>
+        <form class="input-navigate">
+            <input id="navigateCreateBtn" type="button" value="Создать">
+            <input id="navigateVoteBtn" type="button" value="Управлять">
+        </form>
     </div>
-    <div class="foot">
-        <div>
-            <form class="input-navigate">
-                <input id="navigateCreateBtn" type="button" value="Создать">
-                <input id="navigateVoteBtn" type="button" value="Управлять">
-            </form>
-        </div>
-    </div>
-  </body>
+</div>
+</body>
 </html>

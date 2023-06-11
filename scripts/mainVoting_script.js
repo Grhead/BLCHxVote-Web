@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
 
@@ -8,12 +8,12 @@ let navigateVoteBtn = document.getElementById('navigateVoteBtn');
 navigateCreateBtn.onclick = navigateCreateCLick;
 navigateVoteBtn.onclick = navigateVoteCLick;
 
-function navigateCreateCLick(){
+function navigateCreateCLick() {
     window.location.replace("creators.html");
     return false;
 }
 
-function navigateVoteCLick(){
+function navigateVoteCLick() {
     window.location.replace("authVoting.html");
     return false;
 }

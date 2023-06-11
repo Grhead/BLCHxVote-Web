@@ -22,14 +22,12 @@ function baseAuthCLick() {
     }
     req.send(JSON.stringify(data));
     const toParse = JSON.parse(req.responseText);
-    console.log(toParse)
-    console.log(toParse.status)
-    console.log(toParse.status === "true")
-    console.log(toParse.status === true)
-    if (toParse.status === "true") {
-        document.cookie = "login" + "=" + valLogin + ";" +
-            "password" + "=" + valPassword + ";" +
-            "path=/";
+    if (toParse.status === true) {
+        // document.cookie = "login" + "=" + valLogin + ";" +
+        //     "password" + "=" + valPassword + ";" +
+        //     "path=/";
+        document.cookie = "login=" + valLogin + "; path=/";
+        document.cookie = "password=" + valPassword + "; path=/";
         window.location.replace("authVoting.html");
         return false;
     } else {
