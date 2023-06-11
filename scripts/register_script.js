@@ -1,8 +1,10 @@
 const submitBasicAuthBtn = document.getElementById('submitBasicAuthBtn');
+const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
 let valLogin
 let valPassword
 let valPasswordSecond
 submitBasicAuthBtn.onclick = baseAuthCLick;
+submitBasicRegBtn.onclick = baseRegTransCLick;
 
 function baseAuthCLick(){
     valLogin = document.getElementById('loginInput').value;
@@ -33,6 +35,11 @@ function baseAuthCLick(){
         return false;
     }
 }
+function baseRegTransCLick() {
+    window.location.replace("index.html");
+    return false;
+}
+
 function getCookieValue(name) {
     const cookies = document.cookie.split(';');
     const res = cookies.find(c => c.startsWith(name + '='));
