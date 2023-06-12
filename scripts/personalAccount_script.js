@@ -4,18 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
+const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 
-
+navigateAccountBtn.onclick = navigateAccountClick;
 
 let pop = document.getElementById("privateKeyField");
 pop.innerHTML = "Привет, Мир!" +"<br/>";
 pop.innerHTML += "Сказал Джек и поднял ошейник" +"<br/>";
 pop.innerHTML += "своего Дога" +"<br/>";
-
-
-
-
-
 
 
 function check() {

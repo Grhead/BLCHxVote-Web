@@ -39,7 +39,7 @@ function VotingAuth() {
     if (toParse.status === 'Access Denied') {
         alert("You are not entered to system")
     }
-    if (toParse.acceptLoadUserResponse !== undefined) {
+    if (toParse.acceptLoadUserResponse !== "") {
         window.location.replace("mainVoting.html");
     }
 }
@@ -79,5 +79,9 @@ function navigateCreateCLick() {
 
 function navigateVoteCLick() {
     window.location.replace("authVoting.html");
+    return false;
+}
+function navigateAccountClick() {
+    window.location.replace("personalAccount.html");
     return false;
 }

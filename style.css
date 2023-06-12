@@ -320,6 +320,27 @@ body {
     background: #262626;
 }
 
+.creators-form input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    color: #CFCFCF;
+    font-size: 24px;
+    background: #262626;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Open Sans", serif;
+    border-radius: 18px;
+    box-shadow: none;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.creators-form input[type="number"]:focus {
+    background: #262626;
+}
+
 .creators-form input[type="datetime-local"] {
     padding: 10px;
     width: 100%;

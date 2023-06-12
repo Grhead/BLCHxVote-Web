@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
+const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 const navigateRegisterVotingBtn = document.getElementById('submitBasicRegBtn');
 const SubmitRegisterVotingBtn = document.getElementById('submitAuthBtn');
 
@@ -12,6 +13,7 @@ let valSalt;
 
 navigateCreateBtn.onclick = navigateCreateCLick;
 navigateVoteBtn.onclick = navigateVoteCLick;
+navigateAccountBtn.onclick = navigateAccountClick;
 navigateRegisterVotingBtn.onclick = baseRegTransCLick;
 SubmitRegisterVotingBtn.onclick = newRegisterVotingUser;
 
@@ -21,7 +23,7 @@ function newRegisterVotingUser() {
     valSalt = document.getElementById('txtSalt').value;
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8199/acceptLoad", false);
+    req.open("POST", "http://localhost:8199/acceptNew", false);
 
     let data = {
         "pass": valIdentity,
@@ -60,6 +62,11 @@ function navigateVoteCLick() {
     window.location.replace("authVoting.html");
     return false;
 }
+function navigateAccountClick() {
+    window.location.replace("personalAccount.html");
+    return false;
+}
+
 
 function check() {
     if (getCookieValue("login") !== undefined) {

@@ -26,12 +26,15 @@
     <div id="middleBox">
         <form class="creators-form">
             <label>
-                <input type="text" placeholder="Название"/>
+                <input id="voteNaming" type="text" placeholder="Название"/>
             </label>
             <label>
-                <input type="datetime-local"/>
+                <input id="datetimeSetter" type="datetime-local"/>
             </label>
-            <input type="button" value="Создать
+            <label>
+                <input id="numberCountSetter" type="number"/>
+            </label>
+            <input id="createVoteBtn" type="button" value="Создать
 голосование"/>
         </form>
     </div>
@@ -49,6 +52,7 @@
     <div class="foot">
         <div>
             <form class="input-navigate">
+                <input id="navigateAccountBtn" type="button" value="Профиль">
                 <input id="navigateCreateBtn" type="button" value="Создать">
                 <input id="navigateVoteBtn" type="button" value="Управлять">
             </form>
