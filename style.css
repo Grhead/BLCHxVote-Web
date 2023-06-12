@@ -152,9 +152,8 @@ body {
     background: #202020;
 }
 
-.register-input-form-keys textarea {
+.register-input-form-keys p {
     padding: 12px;
-    margin: 10px;
     width: 100%;
     color: #CFCFCF;
     background: #262626;
@@ -168,8 +167,52 @@ body {
     font-family: 'Cascadia Code', sans-serif;
 }
 
-.register-input-form-keys textarea:focus {
+.register-input-form-keys p:focus {
     background: #202020;
+}
+
+.register-input-form-keys input[type="button"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background: #FF4C2B;
+    font-size: 24px;
+    transition: 0.3s;
+    font-family: "Open Sans", serif;
+    min-height: 40px;
+    min-width: 180px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.register-input-form-keys input[type="button"]:hover {
+    background: #D94125;
+}
+
+.div-register-input-form-keys input[type="button"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background: #FF4C2B;
+    font-size: 24px;
+    transition: 0.3s;
+    font-family: "Open Sans", serif;
+    min-height: 40px;
+    min-width: 180px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.div-register-input-form-keys input[type="button"]:hover {
+    background: #D94125;
 }
 
 .input-navigate {
@@ -338,4 +381,9 @@ body {
 .objectsList:focus {
     outline: none;
     background: #262626;
+}
+
+.necessary-inline {
+    display: inline;
+    text-align: center;
 }

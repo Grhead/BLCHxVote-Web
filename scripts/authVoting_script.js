@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', function () {
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
 const navigateRegisterVotingBtn = document.getElementById('submitBasicRegBtn');
+const submitBasicAuthBtn = document.getElementById('submitAuthBtn');
 
 navigateCreateBtn.onclick = navigateCreateCLick;
 navigateVoteBtn.onclick = navigateVoteCLick;
 navigateRegisterVotingBtn.onclick = baseRegTransCLick;
+submitBasicAuthBtn.onclick = VotingAuth;
 
 let valPublicKey;
 let valPrivateKey;
-const submitBasicAuthBtn = document.getElementById('submitAuthBtn');
 
-submitBasicAuthBtn.onclick = VotingAuth;
 
 function VotingAuth() {
     valPublicKey = document.getElementById('txtAreaPublic').value;
@@ -31,16 +31,17 @@ function VotingAuth() {
             "password": getCookieValue("password")
         }
     }
-    console.log(data)
-    console.log(document.cookie)
     req.send(JSON.stringify(data));
     const toParse = JSON.parse(req.responseText);
     if (toParse.error === 'rpc error: code = Unknown desc = invalid master voting') {
         alert("invalid Public or Private Key")
     }
-    // if () {
-    //
-    // }
+    if (toParse.status === 'Access Denied') {
+        alert("You are not entered to system")
+    }
+    if (toParse.acceptLoadUserResponse !== undefined) {
+        window.location.replace("mainVoting.html");
+    }
 }
 
 function getCookieValue(name) {
