@@ -21,9 +21,7 @@ function baseAuthCLick(){
         req.send(JSON.stringify(data));
         const toParse = JSON.parse(req.responseText);
         if (toParse.status === "Succeed") {
-            // document.cookie =   "login=" + valLogin + "; " +
-            //                     "pass=" + valPassword + "; " +
-            //                     "path=/";
+
             document.cookie = "login=" + valLogin + "; path=/";
             document.cookie = "password=" + valPassword + "; path=/";
             window.location.replace("authVoting.html");
