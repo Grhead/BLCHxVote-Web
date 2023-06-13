@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
 
+const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
 const navigateRegisterVotingBtn = document.getElementById('submitBasicRegBtn');
 const submitBasicAuthBtn = document.getElementById('submitAuthBtn');
 
+navigateAccountBtn.onclick = navigateAccountClick;
 navigateCreateBtn.onclick = navigateCreateCLick;
 navigateVoteBtn.onclick = navigateVoteCLick;
 navigateRegisterVotingBtn.onclick = baseRegTransCLick;
@@ -39,7 +41,10 @@ function VotingAuth() {
     if (toParse.status === 'Access Denied') {
         alert("You are not entered to system")
     }
+    console.log(toParse.acceptLoadUserResponse)
     if (toParse.acceptLoadUserResponse !== "") {
+        document.cookie = "valPublicKey=" + valPublicKey + "; path=/";
+        document.cookie = "masterChain=" + toParse.acceptLoadUserResponse.Affiliation + "; path=/";
         window.location.replace("mainVoting.html");
     }
 }

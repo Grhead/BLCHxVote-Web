@@ -101,10 +101,8 @@ body {
     max-width: 80%;
 }
 
-
 .input-form-keys {
-    margin: 15px 30px;
-    text-align: center;
+    margin: 15px 40px;
 }
 
 .input-form-keys textarea {
@@ -115,7 +113,7 @@ body {
     border: none;
     border-radius: 18px;
     outline: none;
-    font-size: 18px;
+    font-size: 19px;
     box-sizing: border-box;
     resize: none;
     overflow: hidden;
@@ -167,7 +165,23 @@ body {
     font-family: 'Cascadia Code', sans-serif;
 }
 
-.register-input-form-keys p:focus {
+#txtAreaPrivate {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #262626;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    margin: 10px;
+}
+
+#txtAreaPrivate:focus {
     background: #202020;
 }
 
@@ -265,20 +279,22 @@ body {
 #leftBox {
     padding: 10px;
     float: left;
+    margin-left: 1%;
     width: 30%;
     height: auto;
     border-radius: 18px;
     background: #1E1E1E;
+
 }
 
 #middleBox {
     padding: 10px;
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     float: left;
-    width: 40%;
+    width: 30%;
     height: auto;
     border-radius: 18px;
     background: #1E1E1E;
@@ -288,6 +304,7 @@ body {
     padding: 10px;
     float: right;
     width: 30%;
+    margin-right: 1%;
     height: auto;
     border-radius: 18px;
     background: #1E1E1E;
@@ -314,6 +331,36 @@ body {
     box-shadow: none;
     font-weight: bold;
     margin: 10px;
+}
+#PublicKeyFieldProfile {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #262626;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+#PrivateKeyFieldProfile {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #262626;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
 }
 
 .creators-form input[type="text"]:focus {
@@ -367,7 +414,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     border: none;
-    background: #FF4C2B;
+    background: #595B82;
     font-size: 24px;
     transition: 0.3s;
     font-family: "Open Sans", serif;
@@ -381,25 +428,71 @@ body {
     background: #D94125;
 }
 
+#finishCreateVoteBtn:hover {
+    margin-top: 0;
+    min-width: 400px;
+    background: #FF4C2B;
+}
+#finishCreateVoteBtn {
+    background: #D94125;
+}
+
+/*.objectsList {*/
+/*    border-radius: 9px;*/
+/*    width: 100%;*/
+/*    font-weight: 700;*/
+/*    text-transform: uppercase;*/
+/*    font-family: "Open Sans", serif;*/
+/*    !* Убираем браузерную стрелку *!*/
+/*    -moz-appearance: none;*/
+/*    -webkit-appearance: none;*/
+/*    appearance: none;*/
+/*    background-color: #1E1E1E;*/
+/*    padding: 10px 35px 10px 15px;*/
+/*    outline: none;*/
+/*    cursor: pointer;*/
+/*}*/
 .objectsList {
     border-radius: 9px;
-    width: 100%;
+    width: 80%;
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Open Sans", serif;
+    font-size: 14px;
     /* Убираем браузерную стрелку */
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    /*appearance: none;*/
     background-color: #1E1E1E;
-    /* Отступы от рамки к тексту */
-    padding: 10px 35px 10px 15px;
-    /* Убираем баузерную обводку*/
     outline: none;
     cursor: pointer;
+    color: #CFCFCF;
+    list-style-type: none;
 }
 
+
 .objectsList:focus {
+    outline: none;
+    background: #262626;
+}
+
+.objectsListVoters {
+    border-radius: 9px;
+    font-size: 10px;
+    width: 80%;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Open Sans", serif;
+    appearance: none;
+    background-color: #1E1E1E;
+    outline: none;
+    cursor: pointer;
+    color: #CFCFCF;
+    list-style-type: none;
+    padding-left: 0;
+    align-content: center;
+}
+
+
+.objectsListVoters:focus {
     outline: none;
     background: #262626;
 }
@@ -407,4 +500,16 @@ body {
 .necessary-inline {
     display: inline;
     text-align: center;
+}
+
+li {
+    list-style-type: none;
+    color: #CFCFCF;
+    font-size: 18px;
+    font-family: "Open Sans", serif;
+}
+
+.wrapper {
+    overflow:auto;
+    height:200px;
 }

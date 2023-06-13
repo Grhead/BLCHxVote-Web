@@ -15,14 +15,25 @@
     <div id="leftBox">
         <form class="creators-form">
             <label>
-                <input type="text" placeholder="Приглашенный"/>
+                <input id="creatorsVoterInput" type="text" placeholder="Приглашенный"/>
             </label>
-            <input type="button" value="Добавить"/>
-            <label for="setsList"></label><select name="setsList" id="setsList" class="objectsList">
-            <option value="MainObject"></option>
-        </select>
+            <input id="votersBtn" type="button" value="Добавить"/>
+<!--            <label for="setsList"></label><select name="setsList" id="setsList" class="objectsList">-->
+<!--            <option value="MainObject"></option>-->
+<!--        </select>-->
+            <div class="wrapper">
+            <ul id="setsList" class="objectsListVoters">
+
+            </ul>
+            </div>
+            <div class="wrapper">
+                <ul id="setsListPass" class="objectsListVoters">
+
+                </ul>
+            </div>
         </form>
     </div>
+
     <div id="middleBox">
         <form class="creators-form">
             <label>
@@ -36,17 +47,25 @@
             </label>
             <input id="createVoteBtn" type="button" value="Создать
 голосование"/>
+            <br>
+            <input id="finishCreateVoteBtn" type="button" value="Завершить
+создание"/>
         </form>
     </div>
     <div id="rightBox">
         <form class="creators-form">
             <label>
-                <input type="text" placeholder="Объект"/>
+                <input id="creatorsObjectInput" type="text" placeholder="Объект"/>
             </label>
-            <input type="button" value="Добавить"/>
-            <label for="candidatesList"></label><select name="candidatesList" id="candidatesList" class="objectsList">
-            <option value="MainObject"></option>
-        </select>
+            <input id="objectsBtn" type="button" value="Добавить"/>
+<!--            <label for="candidatesList"></label><select name="candidatesList" id="candidatesList" class="objectsList">-->
+<!--            <option value="MainObject"></option>-->
+<!--        </select>-->
+            <div class="wrapper">
+            <ul id="candidatesList" class="objectsList">
+
+            </ul>
+            </div>
         </form>
     </div>
     <div class="foot">
