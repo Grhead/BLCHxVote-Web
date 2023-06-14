@@ -198,6 +198,82 @@ body {
     font-family: 'Cascadia Code', sans-serif;
 }
 
+#currentHash {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #202020;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+#previousHash {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #202020;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+#dateTime {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #202020;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+#BalanceMap {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #202020;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+#Nonce {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    background: #202020;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+}
+
 #txtAreaPrivateReg {
     padding: 19px;
     width: 100%;

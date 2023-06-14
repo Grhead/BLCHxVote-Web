@@ -22,10 +22,6 @@ navigateAccountBtn.onclick = navigateAccountClick;
 PrivateKeyFieldProfile.onclick = showPrivate;
 voteFromAccount.onclick = navigateVoteCLick;
 
-// let pop = document.getElementById("privateKeyField");
-// pop.innerHTML = "Привет, Мир!" +"<br/>";
-// pop.innerHTML += "Сказал Джек и поднял ошейник" +"<br/>";
-// pop.innerHTML += "своего Дога" +"<br/>";
 PublicKeyFieldProfile.innerHTML = getCookieValue("valPublicKey")
 PrivateKeyFieldProfile.innerHTML = "СКРЫТО"
 

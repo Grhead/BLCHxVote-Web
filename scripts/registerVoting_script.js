@@ -25,7 +25,6 @@ navigateRegisterVotingBtn.onclick = baseRegTransCLick;
 SubmitRegisterVotingBtn.onclick = newRegisterVotingUser;
 
 function newRegisterVotingUser() {
-    alert(getCookieValue("login"))
     valIdentity = document.getElementById('txtIdentification').value;
     valPublicKey = document.getElementById('txtAreaPrivateReg').value;
     valSalt = document.getElementById('txtSalt').value;
