@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
@@ -75,6 +75,8 @@ function baseRegTransCLick() {
 }
 
 function check() {
+    console.log(getCookieValue("login"))
+    alert(getCookieValue("login"))
     if (getCookieValue("login") !== undefined) {
         window.location.replace("authVoting.html");
     } else {

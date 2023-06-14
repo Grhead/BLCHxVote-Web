@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
-
-
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
     check()
@@ -29,7 +27,7 @@ SubmitRegisterVotingBtn.onclick = newRegisterVotingUser;
 function newRegisterVotingUser() {
     alert(getCookieValue("login"))
     valIdentity = document.getElementById('txtIdentification').value;
-    valPublicKey = document.getElementById('txtAreaPrivate').value;
+    valPublicKey = document.getElementById('txtAreaPrivateReg').value;
     valSalt = document.getElementById('txtSalt').value;
 
     const req = new XMLHttpRequest();

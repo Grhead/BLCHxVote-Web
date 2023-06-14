@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 window.addEventListener('load', () => {
     const req = new XMLHttpRequest();
@@ -19,17 +19,17 @@ window.addEventListener('load', () => {
     }
     req.send(JSON.stringify(dataCreators));
     const toParseSecond = JSON.parse(req.responseText);
-    var delChild= select.lastChild;
+    let delChild= select.lastChild;
     while (delChild) {
         select.removeChild(delChild);
         delChild = select.lastChild;
     }
-    for (index = 0; index < toParseSecond.candidatesList.electionSubjects.length; ++index) {
+    for (let index = 0; index < toParseSecond.candidatesList.electionSubjects.length; ++index) {
         console.log(toParseSecond.candidatesList.electionSubjects[index]);
-        // var li = document.createElement("li");
+        // let li = document.createElement("li");
         // select.appendChild(document.createTextNode(toParseSecond.candidatesList.electionSubjects[index].Description));
         // select.appendChild(li);
-        var opt = document.createElement('option');
+        let opt = document.createElement('option');
         opt.value = toParseSecond.candidatesList.electionSubjects[index].Description;
         opt.innerHTML = toParseSecond.candidatesList.electionSubjects[index].Description;
         select.appendChild(opt);
@@ -48,8 +48,8 @@ navigateAccountBtn.onclick = navigateAccountClick;
 letsVote.onclick = letsVoteClick;
 
 function letsVoteClick() {
-    var objectIdOfDescription;
-    var value = select.value;
+    let objectIdOfDescription;
+    let value = select.value;
     const req = new XMLHttpRequest();
     req.open("POST", "http://localhost:8199/viewCandidates", false);
     let data = {
@@ -61,7 +61,7 @@ function letsVoteClick() {
     }
     req.send(JSON.stringify(data));
     const toParse = JSON.parse(req.responseText);
-    for (index = 0; index < toParse.candidatesList.electionSubjects.length; ++index) {
+    for (let index = 0; index < toParse.candidatesList.electionSubjects.length; ++index) {
         console.log(toParse.candidatesList.electionSubjects[index]);
         if (toParse.candidatesList.electionSubjects[index].Description === value) {
             objectIdOfDescription = toParse.candidatesList.electionSubjects[index]
@@ -80,8 +80,13 @@ function letsVoteClick() {
             "password": getCookieValue("password")
         }
     }
+    //TODO create VOTE handler
     req.send(JSON.stringify(dataCreators));
     const toParseSecond = JSON.parse(req.responseText);
+    if (toParseSecond.error === undefined) {
+        alert("Успешно")
+        window.location.replace("showChain.html");
+    }
 }
 function getCookieValue(name) {
     let name_cook = name + "=";
@@ -96,6 +101,16 @@ function getCookieValue(name) {
         }
     }
     return null;
+}
+
+function check() {
+    console.log(getCookieValue("login"))
+    alert(getCookieValue("login"))
+    if (getCookieValue("login") !== undefined) {
+        //window.location.replace("resultPage.html");
+    } else {
+        window.location.replace("index.html");
+    }
 }
 
 function navigateCreateCLick() {

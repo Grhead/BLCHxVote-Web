@@ -15,7 +15,6 @@ body {
     transform: translate(-50%, -50%);
     background: #1E1E1E;
     border-radius: 18px;
-    /*border: 18px solid #5A6B5D;*/
 }
 
 #soloMiddle {
@@ -26,7 +25,21 @@ body {
     padding: 20px;
     background: #1E1E1E;
     border-radius: 18px;
-    /*border: 18px solid #5A6B5D;*/
+    float: left;
+    width: 40%;
+    height: auto;
+}
+#soloMiddleBox {
+    position: absolute;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #1E1E1E;
+    border-radius: 18px;
     float: left;
     width: 40%;
     height: auto;
@@ -102,23 +115,43 @@ body {
 }
 
 .input-form-keys {
-    margin: 15px 40px;
+    margin: 15px 20px;
 }
 
 .input-form-keys textarea {
-    padding: 12px;
+    padding: 18px;
     width: 100%;
     color: #CFCFCF;
     background: #262626;
     border: none;
     border-radius: 18px;
     outline: none;
-    font-size: 19px;
+    font-size: 22px;
     box-sizing: border-box;
     resize: none;
     overflow: hidden;
+    margin-bottom: 10px;
     font-family: 'Cascadia Code', sans-serif;
 }
+
+/*#txtAreaPrivateReg {*/
+/*    padding: 18px;*/
+/*    width: 100%;*/
+/*    color: #CFCFCF;*/
+/*    background: #262626;*/
+/*    border: none;*/
+/*    border-radius: 18px;*/
+/*    outline: none;*/
+/*    font-size: 22px;*/
+/*    box-sizing: border-box;*/
+/*    resize: none;*/
+/*    overflow: hidden;*/
+/*    margin-bottom: 10px;*/
+/*    font-family: 'Cascadia Code', sans-serif;*/
+/*}*/
+/*#txtAreaPrivateReg:focus {*/
+/*    background: #202020;*/
+/*}*/
 
 .input-form-keys textarea:focus {
     background: #202020;
@@ -165,8 +198,8 @@ body {
     font-family: 'Cascadia Code', sans-serif;
 }
 
-#txtAreaPrivate {
-    padding: 12px;
+#txtAreaPrivateReg {
+    padding: 19px;
     width: 100%;
     color: #CFCFCF;
     background: #262626;
@@ -181,7 +214,7 @@ body {
     margin: 10px;
 }
 
-#txtAreaPrivate:focus {
+#txtAreaPrivateReg:focus {
     background: #202020;
 }
 
@@ -283,9 +316,9 @@ body {
     text-decoration-color: #FF4C2B;
 }
 
-#boxes {
-    display: inline;
-}
+/*#boxes {*/
+/*    display: inline;*/
+/*}*/
 
 #leftBox {
     padding: 10px;
@@ -295,7 +328,6 @@ body {
     height: auto;
     border-radius: 18px;
     background: #1E1E1E;
-
 }
 
 #middleBox {
@@ -517,10 +549,10 @@ body {
     background: #262626;
 }
 
-.necessary-inline {
-    display: inline;
-    text-align: center;
-}
+/*.necessary-inline {*/
+/*    display: inline;*/
+/*    text-align: center;*/
+/*}*/
 
 li {
     list-style-type: none;
@@ -533,3 +565,65 @@ li {
     overflow:auto;
     height:200px;
 }
+.wrapper-second {
+    overflow:auto;
+    height:400px;
+}
+
+#mainChain {
+    padding: 12px;
+    width: 100%;
+    color: #CFCFCF;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+    font-family: 'Cascadia Code', sans-serif;
+    word-wrap: break-word;
+    align-content: start;
+}
+
+#backBtn {
+    border-radius: 9px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background: #595B82;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: "Open Sans", serif;
+    height: 40px;
+    width: 180px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#backBtn:hover {
+    background: #D94125;
+    border-radius: 2px;
+}
+#forwardBtn {
+    border-radius: 9px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background: #D94125;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: "Open Sans", serif;
+    height: 40px;
+    width: 180px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#forwardBtn:hover {
+    background: #595B82;
+    border-radius: 2px;
+}
+

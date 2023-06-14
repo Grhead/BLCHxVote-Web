@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
@@ -30,20 +30,20 @@ navigateCreateBtn.onclick = navigateCreateCLick;
 navigateVoteBtn.onclick = navigateVoteCLick;
 navigateAccountBtn.onclick = navigateAccountClick;
 createVoteBtnElement.onclick = requestNewChain;
-finishCreateVoteBtn.onclick = navigatefinishCreateVoteBtn;
+finishCreateVoteBtn.onclick = navigateFinishCreateVoteBtn;
 
-function navigatefinishCreateVoteBtn() {
-    const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8199/viewCandidates", false);
-    let dataCreators = {
-        "master": master,
-        "auth": {
-            "login": getCookieValue("login"),
-            "password": getCookieValue("password")
-        }
-    }
-    req.send(JSON.stringify(dataCreators));
-    const toParseSecond = JSON.parse(req.responseText);
+function navigateFinishCreateVoteBtn() {
+    // const req = new XMLHttpRequest();
+    // req.open("POST", "http://localhost:8199/viewCandidates", false);
+    // let dataCreators = {
+    //     "master": master,
+    //     "auth": {
+    //         "login": getCookieValue("login"),
+    //         "password": getCookieValue("password")
+    //     }
+    // }
+    // req.send(JSON.stringify(dataCreators));
+    // const toParseSecond = JSON.parse(req.responseText);
     if (voteNamingElement === undefined) {
         window.location.replace("personalAccount.html");
     } else {
@@ -91,14 +91,14 @@ function createCandidate(){
                     req.send(JSON.stringify(dataCreators));
                     const toParseSecond = JSON.parse(req.responseText);
                     console.log(toParseSecond.candidatesList.electionSubjects)
-                    var delChild = select.lastChild;
+                    let delChild = select.lastChild;
                     while (delChild) {
                         select.removeChild(delChild);
                         delChild = select.lastChild;
                     }
-                    for (index = 0; index < toParseSecond.candidatesList.electionSubjects.length; ++index) {
+                    for (let index = 0; index < toParseSecond.candidatesList.electionSubjects.length; ++index) {
                         console.log(toParseSecond.candidatesList.electionSubjects[index]);
-                        var li = document.createElement("li");
+                        let li = document.createElement("li");
                         select.appendChild(document.createTextNode(toParseSecond.candidatesList.electionSubjects[index].Description));
                         select.appendChild(li);
                     }
@@ -134,25 +134,25 @@ function createVoters(){
             alert("You are not entered to system")
         }
         if (toParse.voterObjects.length > 0) {
-            var delChild = selectVoters.lastChild;
+            let delChild = selectVoters.lastChild;
             while (delChild) {
                 selectVoters.removeChild(delChild);
                 delChild = selectVoters.lastChild;
             }
-            for (index = 0; index < toParse.voterObjects.length; ++index) {
+            for (let index = 0; index < toParse.voterObjects.length; ++index) {
                 console.log(toParse.voterObjects[index]);
-                var li = document.createElement("li");
+                let li = document.createElement("li");
                 selectVoters.appendChild(document.createTextNode(toParse.voterObjects[index].PublicKey.toLowerCase()));
                 selectVoters.appendChild(li);
             }
-            var delChildPass = selectVotersPass.lastChild;
+            let delChildPass = selectVotersPass.lastChild;
             while (delChildPass) {
                 selectVotersPass.removeChild(delChildPass);
                 delChildPass = selectVotersPass.lastChild;
             }
-            for (index = 0; index < toParse.identities.length; ++index) {
+            for (let index = 0; index < toParse.identities.length; ++index) {
                 console.log(toParse.voterObjects[index]);
-                var li = document.createElement("li");
+                let li = document.createElement("li");
                 selectVotersPass.appendChild(document.createTextNode(toParse.identities[index].toLowerCase()));
                 selectVotersPass.appendChild(li);
             }
@@ -164,12 +164,12 @@ function createVoters(){
 function requestNewChain() {
     voteNamingElement = document.getElementById("voteNaming").value;
     numberCountSetter = document.getElementById("numberCountSetter").value;
-    var delChildPass = selectVotersPass.lastChild;
+    let delChildPass = selectVotersPass.lastChild;
     while (delChildPass) {
         selectVotersPass.removeChild(delChildPass);
         delChildPass = selectVotersPass.lastChild;
     }
-    var delChild = select.lastChild;
+    let delChild = select.lastChild;
     while (delChild) {
         select.removeChild(delChild);
         delChild = select.lastChild;
@@ -245,23 +245,23 @@ function getCookieValue(name) {
 }
 function check() {
     if (getCookieValue("login") !== undefined) {
-        window.location.replace("authVoting.html");
+        // window.location.replace("authVoting.html");
     } else {
         window.location.replace("index.html");
     }
 }
 function navigateCreateCLick() {
-    const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8199/viewCandidates", false);
-    let dataCreators = {
-        "master": master,
-        "auth": {
-            "login": getCookieValue("login"),
-            "password": getCookieValue("password")
-        }
-    }
-    req.send(JSON.stringify(dataCreators));
-    const toParseSecond = JSON.parse(req.responseText);
+    // const req = new XMLHttpRequest();
+    // req.open("POST", "http://localhost:8199/viewCandidates", false);
+    // let dataCreators = {
+    //     "master": master,
+    //     "auth": {
+    //         "login": getCookieValue("login"),
+    //         "password": getCookieValue("password")
+    //     }
+    // }
+    // req.send(JSON.stringify(dataCreators));
+    // const toParseSecond = JSON.parse(req.responseText);
     if (voteNamingElement === undefined) {
         window.location.replace("creators.html");
     } else {
@@ -270,17 +270,17 @@ function navigateCreateCLick() {
     return false;
 }
 function navigateVoteCLick() {
-    const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8199/viewCandidates", false);
-    let dataCreators = {
-        "master": master,
-        "auth": {
-            "login": getCookieValue("login"),
-            "password": getCookieValue("password")
-        }
-    }
-    req.send(JSON.stringify(dataCreators));
-    const toParseSecond = JSON.parse(req.responseText);
+    // const req = new XMLHttpRequest();
+    // req.open("POST", "http://localhost:8199/viewCandidates", false);
+    // let dataCreators = {
+    //     "master": master,
+    //     "auth": {
+    //         "login": getCookieValue("login"),
+    //         "password": getCookieValue("password")
+    //     }
+    // }
+    // req.send(JSON.stringify(dataCreators));
+    // const toParseSecond = JSON.parse(req.responseText);
     if (voteNamingElement === undefined) {
         window.location.replace("authVoting.html");
     } else {
@@ -289,17 +289,17 @@ function navigateVoteCLick() {
     return false;
 }
 function navigateAccountClick() {
-    const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8199/viewCandidates", false);
-    let dataCreators = {
-        "master": master,
-        "auth": {
-            "login": getCookieValue("login"),
-            "password": getCookieValue("password")
-        }
-    }
-    req.send(JSON.stringify(dataCreators));
-    const toParseSecond = JSON.parse(req.responseText);
+    // const req = new XMLHttpRequest();
+    // req.open("POST", "http://localhost:8199/viewCandidates", false);
+    // let dataCreators = {
+    //     "master": master,
+    //     "auth": {
+    //         "login": getCookieValue("login"),
+    //         "password": getCookieValue("password")
+    //     }
+    // }
+    // req.send(JSON.stringify(dataCreators));
+    // const toParseSecond = JSON.parse(req.responseText);
     if (voteNamingElement === undefined) {
         window.location.replace("personalAccount.html");
     } else {

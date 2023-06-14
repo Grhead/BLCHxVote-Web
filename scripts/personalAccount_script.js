@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');

@@ -1,16 +1,16 @@
-const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
 document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
-
-
-window.addEventListener('load', () => {
-    check()
-});
+//
+//
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 let valLogin
 let valPassword
 
+const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
 submitBasicAuthBtn.onclick = baseAuthCLick;
 submitBasicRegBtn.onclick = baseRegTransCLick;
 

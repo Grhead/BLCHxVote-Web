@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
-
-
-window.addEventListener('load', () => {
-    check()
-});
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 window.addEventListener('load', () => {
     check()
@@ -27,20 +25,20 @@ window.addEventListener('load', () => {
     }
     req.send(JSON.stringify(dataCreators));
     const toParseSecond = JSON.parse(req.responseText);
-    var delChild= [];
+    let delChild= [];
     // while (delChild) {
     //     select.removeChild(delChild);
     //     delChild = select.lastChild;
     // }
     console.log(toParseSecond.winnersList)
-    for (index = 0; index < toParseSecond.winnersList.electionList.length; ++index) {
+    for (let index = 0; index < toParseSecond.winnersList.electionList.length; ++index) {
         delChild[index] = toParseSecond.winnersList.electionList[index].electionSubjects.Description;
     }
-    var delChild2= [];
-    for (index = 0; index < toParseSecond.winnersList.electionList.length; ++index) {
+    let delChild2= [];
+    for (let index = 0; index < toParseSecond.winnersList.electionList.length; ++index) {
         delChild2[index] = toParseSecond.winnersList.electionList[index].Balance;
     }
-    var ctx = document.getElementById('myChart').getContext('2d');
+    let ctx = document.getElementById('myChart').getContext('2d');
     const dataSales2020 = {
         label: "Результаты голосования",
         data: delChild2, // Данные представляют собой массив, который должен иметь такое же количество значений, как и количество тегов.

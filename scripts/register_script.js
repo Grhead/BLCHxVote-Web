@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
-
-
-window.addEventListener('load', () => {
-    check()
-});
+//
+//
+// window.addEventListener('load', () => {
+//     check()
+// });
 
 const submitBasicAuthBtn = document.getElementById('submitBasicAuthBtn');
 const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
@@ -53,5 +53,13 @@ function getCookieValue(name) {
     const res = cookies.find(c => c.startsWith(name + '='));
     if (res) {
         return res.substring(res.indexOf('=') + 1);
+    }
+}
+
+function check() {
+    if (getCookieValue("login") !== undefined) {
+        //window.location.replace("resultPage.html");
+    } else {
+        window.location.replace("index.html");
     }
 }
