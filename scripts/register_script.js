@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+    check()
+}, false);
+
+
+window.addEventListener('load', () => {
+    check()
+});
+
 const submitBasicAuthBtn = document.getElementById('submitBasicAuthBtn');
 const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
 let valLogin

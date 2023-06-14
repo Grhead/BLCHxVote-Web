@@ -1,7 +1,12 @@
 const submitBasicRegBtn = document.getElementById('submitBasicRegBtn');
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
+
+
+window.addEventListener('load', () => {
+    check()
+});
 
 let valLogin
 let valPassword

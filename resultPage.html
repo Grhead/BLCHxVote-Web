@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VOX</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="scripts/result_script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+  <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+</head>
+<body>
+<div class="formBoxes">
+<h1>Результаты</h1>
+</div>
+<div class="container">
+  <canvas id="myChart" width="600" height="400"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="scripts/result_script.js"></script>
+<h2 id="soloWinnerTag"></h2>
+<div class="wrapper">
+  <ul id="setsListPass" class="objectsListVoters">
+  </ul>
+</div>
+<div class="foot">
+  <div>
+    <form class="input-navigate">
+      <input id="navigateAccountBtn" type="button" value="Профиль">
+      <input id="navigateCreateBtn" type="button" value="Создать">
+      <input id="navigateVoteBtn" type="button" value="Управлять">
+    </form>
+  </div>
+</div>
+</body>
+</html>

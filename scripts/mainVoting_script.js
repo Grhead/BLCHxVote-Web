@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
 
+
+window.addEventListener('load', () => {
+    check()
+});
+
 window.addEventListener('load', () => {
     const req = new XMLHttpRequest();
     req.open("POST", "http://localhost:8199/viewCandidates", false);

@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
 
+
+window.addEventListener('load', () => {
+    check()
+});
+
 const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');

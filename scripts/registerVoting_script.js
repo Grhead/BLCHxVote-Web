@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
+
+
+window.addEventListener('load', () => {
+    check()
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    check()
+}, false);
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
 const navigateAccountBtn = document.getElementById('navigateAccountBtn');

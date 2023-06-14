@@ -271,6 +271,17 @@ body {
     text-transform: uppercase;
     font-family: "Open Sans", serif;
 }
+#soloWinnerTag {
+    margin: 10% 80px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: "Open Sans", serif;
+    text-decoration: underline;
+    text-decoration-color: #FF4C2B;
+}
 
 #boxes {
     display: inline;
@@ -468,6 +479,15 @@ body {
     list-style-type: none;
 }
 
+.container {
+    padding: 5%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 18px;
+    background: #1E1E1E;
+}
 
 .objectsList:focus {
     outline: none;
