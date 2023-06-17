@@ -26,9 +26,6 @@ window.addEventListener('load', () => {
     }
     for (let index = 0; index < toParseSecond.candidatesList.electionSubjects.length; ++index) {
         console.log(toParseSecond.candidatesList.electionSubjects[index]);
-        // let li = document.createElement("li");
-        // select.appendChild(document.createTextNode(toParseSecond.candidatesList.electionSubjects[index].Description));
-        // select.appendChild(li);
         let opt = document.createElement('option');
         opt.value = toParseSecond.candidatesList.electionSubjects[index].Description;
         opt.innerHTML = toParseSecond.candidatesList.electionSubjects[index].Description;

@@ -2,16 +2,50 @@ document.addEventListener('DOMContentLoaded', function () {
     check()
 }, false);
 
+window.addEventListener('load', () => {
+    const req = new XMLHttpRequest();
+    req.open("POST", "http://localhost:8199/history", false);
+    let dataCreators = {
+        "auth": {
+            "login": getCookieValue("login"),
+            "password": getCookieValue("password")
+        }
+    }
+    req.send(JSON.stringify(dataCreators));
+    const toParseSecond = JSON.parse(req.responseText);
+    let delChild= select.lastChild;
+    while (delChild) {
+        select.removeChild(delChild);
+        delChild = select.lastChild;
+    }
+    console.log(toParseSecond)
+    if (toParseSecond.historyList !== null) {
+        for (let index = 0; index < toParseSecond.historyList.length; ++index) {
+            let opt = document.createElement('option');
+            opt.value = toParseSecond.historyList[index].master + "\n" +
+                toParseSecond.historyList[index].size + "\n" +
+                toParseSecond.historyList[index].effectivity.toString() + "\n"
+                toParseSecond.historyList[index].soloWinner;
+            opt.innerHTML = toParseSecond.historyList[index].master + "\n" +
+                toParseSecond.historyList[index].size + "\n" +
+                toParseSecond.historyList[index].effectivity.toString() + "\n" +
+                toParseSecond.historyList[index].soloWinner;
+            select.appendChild(opt);
+        }
+    } else {
+        let opt = document.createElement('option');
+        opt.value = "У вас ещё нет истории"
+        opt.innerHTML = "У вас ещё нет истории";
+        select.appendChild(opt);
+    }
 
-// window.addEventListener('load', () => {
-//     check()
-// });
+});
 
 const navigateCreateBtn = document.getElementById('navigateCreateBtn');
 const navigateVoteBtn = document.getElementById('navigateVoteBtn');
 const navigateAccountBtn = document.getElementById('navigateAccountBtn');
 const voteFromAccount = document.getElementById('voteFromAccount');
-
+const select = document.getElementById("votingList");
 
 const PublicKeyFieldProfile = document.getElementById('PublicKeyFieldProfile');
 const PrivateKeyFieldProfile = document.getElementById('PrivateKeyFieldProfile');
